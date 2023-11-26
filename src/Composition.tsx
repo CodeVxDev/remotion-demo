@@ -4,6 +4,7 @@ import {Subtitle} from './Subtitle';
 import {Title} from './Title';
 import {z} from 'zod';
 import {zColor} from '@remotion/zod-types';
+import {Terminal} from './Terminal';
 
 export const myCompSchema = z.object({
 	titleText: z.string(),
@@ -17,12 +18,17 @@ export const MyComposition: React.FC<z.infer<typeof myCompSchema>> = ({
 	logoColor: propThree,
 }) => {
 	return (
-		<AbsoluteFill className="bg-gray-100 items-center justify-center">
-			<div className="m-10" />
-			<Logo logoColor={propThree} />
+		<AbsoluteFill className="bg-gray-900 items-center justify-center">
+			<div
+				className="bg-[url('./assets/background.svg')] w-full h-full flex items-center
+			justify-center"
+			>
+				{/* <Logo logoColor={propThree} />
 			<div className="m-3" />
 			<Title titleText={propOne} titleColor={propTwo} />
-			<Subtitle />
+			<Subtitle /> */}
+				<Terminal />
+			</div>
 		</AbsoluteFill>
 	);
 };

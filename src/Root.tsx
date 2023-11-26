@@ -19,6 +19,19 @@ export const RemotionRoot: React.FC = () => {
 					logoColor: '#00bfff',
 				}}
 			/>
+			<Composition
+				id="MyComp1"
+				component={MyComposition}
+				durationInFrames={150}
+				height={720}
+				width={1280}
+				fps={30}
+				defaultProps={{
+					titleText: 'Welcome to Remotion with Tailwind CSS',
+					titleColor: '#000000',
+					logoColor: '#00bfff',
+				}}
+			/>
 		</>
 	);
 };
