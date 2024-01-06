@@ -1,8 +1,8 @@
-# Astro View Transtions Demo Video made with Remotion & Tailwind
+# Astro View Transitions Demo Video made with Remotion & Tailwind
 
 <p align="center">
     <video>
-      <source src="out/MyComp.mp4" type="video/mp4">
+      <source src="https://github.com/CodeVxDev/learn-video/assets/149132260/f3072f17-bac0-4cf2-b1ae-6658d542dae8" type="video/mp4">
     </video>
 </p>
 
