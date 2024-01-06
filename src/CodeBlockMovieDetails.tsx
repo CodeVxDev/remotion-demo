@@ -12,7 +12,7 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 			pxTransform = interpolate(frame, [30, 80], [0, 20], {
 				extrapolateRight: 'clamp',
 			});
-			pxOpacity = interpolate(frame, [80, 120], [0, 1], {
+			pxOpacity = interpolate(frame, [30, 70], [0, 1], {
 				extrapolateRight: 'clamp',
 			});
 		}
@@ -42,7 +42,7 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 														 before:text-gray-400 before:content-[attr(data-attr)]`}
 					style={{
 						opacity: pxOpacity,
-						display: `${frame > 80 && !before ? 'block' : 'none'}`,
+						display: `${frame > 30 && !before ? 'block' : 'none'}`,
 					}}
 					data-attr="3 +"
 				>
@@ -56,7 +56,9 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 80 ? "before:content-['4']" : "before:content-['3']"
+									!before && frame > 30
+										? "before:content-['4']"
+										: "before:content-['3']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -69,7 +71,9 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 80 ? "before:content-['5']" : "before:content-['4']"
+									!before && frame > 30
+										? "before:content-['5']"
+										: "before:content-['4']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -86,7 +90,9 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 80 ? "before:content-['6']" : "before:content-['5']"
+									!before && frame > 30
+										? "before:content-['6']"
+										: "before:content-['5']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -106,24 +112,28 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 80 ? "before:content-['7']" : "before:content-['6']"
+									!before && frame > 30
+										? "before:content-['7']"
+										: "before:content-['6']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
 					}}
 				>
 					<span className="text-gray-300">{`    <`}</span>
-					<span className="text-green-400">h1</span>
+					<span className="text-green-400">h2</span>
 					<span className="text-gray-300">{`>`}</span>
 					<span className="text-gray-300">Plot</span>
 					<span className="text-gray-300">{`</`}</span>
-					<span className="text-green-400">h1</span>
+					<span className="text-green-400">h2</span>
 					<span className="text-gray-300">{`>`}</span>
 				</span>
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 80 ? "before:content-['8']" : "before:content-['7']"
+									!before && frame > 30
+										? "before:content-['8']"
+										: "before:content-['7']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -143,7 +153,9 @@ export const CodeBlockMovieDetails: React.FC<{before: boolean}> = ({
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 80 ? "before:content-['9']" : "before:content-['8']"
+									!before && frame > 30
+										? "before:content-['9']"
+										: "before:content-['8']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,

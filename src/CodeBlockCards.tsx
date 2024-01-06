@@ -10,7 +10,7 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 			pxTransform = interpolate(frame, [30, 80], [0, 20], {
 				extrapolateRight: 'clamp',
 			});
-			pxOpacity = interpolate(frame, [80, 120], [0, 1], {
+			pxOpacity = interpolate(frame, [30, 70], [0, 1], {
 				extrapolateRight: 'clamp',
 			});
 		}
@@ -77,7 +77,7 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 														 before:text-gray-400 before:content-[attr(data-attr)]`}
 					style={{
 						opacity: pxOpacity,
-						display: `${frame > 80 && !before ? 'block' : 'none'}`,
+						display: `${frame > 30 && !before ? 'block' : 'none'}`,
 					}}
 					data-attr="6 +"
 				>
@@ -93,7 +93,9 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 30 ? "before:content-['7']" : "before:content-['6']"
+									!before && frame > 30
+										? "before:content-['7']"
+										: "before:content-['6']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -106,7 +108,9 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 30 ? "before:content-['8']" : "before:content-['7']"
+									!before && frame > 30
+										? "before:content-['8']"
+										: "before:content-['7']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -123,7 +127,9 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 30 ? "before:content-['9']" : "before:content-['8']"
+									!before && frame > 30
+										? "before:content-['9']"
+										: "before:content-['8']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -136,7 +142,9 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 30 ? "before:content-['10']" : "before:content-['9']"
+									!before && frame > 30
+										? "before:content-['10']"
+										: "before:content-['9']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -149,7 +157,9 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 30 ? "before:content-['11']" : "before:content-['10']"
+									!before && frame > 30
+										? "before:content-['11']"
+										: "before:content-['10']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
@@ -160,7 +170,9 @@ export const CodeBlockCards: React.FC<{before: boolean}> = ({before}) => {
 				<span
 					className={`relative m-1  px-4 text-xl before:inline-block before:w-6 
 								before:text-gray-500 ${
-									frame > 30 ? "before:content-['12']" : "before:content-['11']"
+									!before && frame > 30
+										? "before:content-['12']"
+										: "before:content-['11']"
 								}`}
 					style={{
 						transform: `translateY(${pxTransform}px)`,
